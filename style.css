@@ -109,18 +109,32 @@ body , .container {
     border-top-left-radius: 2em;
 }
 
-.dash nav ul li::before {
+.dash nav ul li:hover::before {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 25px;
-    height: 25px;
-    background: var(--primary-color);
+    top: -63%;
+    right: 14%;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-radius: 100%;
+    box-shadow: 21px 35px 0 10px var(--dashboard-color);
+}
+.dash nav ul li:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -63%;
+    right: 14%;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-radius: 100%;
+    box-shadow: 21px -35px 0 10px var(--dashboard-color);
 }
 
 .dash nav ul li:hover {
     background: var(--dashboard-color);
+    border-radius: 5em;
 }
 
 .dash nav ul li a,
@@ -238,7 +252,7 @@ body , .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1em 0;
+    margin: 2.5em 0;
 }
 
 .dashboard header ul {
@@ -259,6 +273,7 @@ body , .container {
     top: 2em;
     height: 4px;
     background: var(--primary-color);
+    border-radius: 1em;
 }
 
 .dashboard header .update {
