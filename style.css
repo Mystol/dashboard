@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&family=Varela+Round&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --primary-color: #E85817;
+    --dash-color: #fff;
+    --dashboard-color: #FAF9FA;
+    --text-color: #C6C4C6;
+    --color-text: #383738;
+    --btn-color: #1CB497;
+
+    /* --primary-color: #E85817;
+    --dash-color: #20252B;
+    --dashboard-color: #282C38;
+    --text-color: #C3C1C2; */
+}
+
+body , .container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dash {
+    position: fixed;
+    width: 15em;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background: var(--dash-color);
+}
+
+.dash .profil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dash .profil .img {
+    position: relative;
+    margin-top: 1.8em;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 1px solid var(--dash-color);
+    background: url('imgs/pexels-pixabay-415829.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dash .profil .img span {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background: var(--primary-color);
+    border: 3px solid var(--dash-color);
+    border-radius: 100%;
+}
+
+.dash .profil h3 {
+    margin-top: 0.7em;
+    color: var(--color-text);
+}
+
+.dash .profil p {
+    margin-top: 0.3em;
+    font-size: 0.7vw;
+    letter-spacing: 0.2em;
+    color: var(--text-color);
+}
+
+.dash nav,
+.dash nav ul,
+.dash nav ul li {
+    width: 100%;
+}
+.dash nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dash nav ul li {
+    position: relative;
+    height: 3.8em;
+    margin-left: 2em;
+    padding-left: 2em;
+    display: flex;
+    align-items: center;
+    border-bottom-left-radius: 2em;
+    border-top-left-radius: 2em;
+}
+
+.dash nav ul li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background: var(--primary-color);
+}
+
+.dash nav ul li:hover {
+    background: var(--dashboard-color);
+}
+
+.dash nav ul li a,
+.dash nav ul li i {
+    color: var(--text-color);
+}
+
+.dash nav ul li:nth-child(3) a {
+    position: relative;
+}
+.dash nav ul li:nth-child(3) a::after {
+    content: '';
+    position: absolute;
+    top: 25%;
+    right: -1.5em;
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 100%;
+}
+
+.dash nav ul li i {
+    transform: scale(1.5);
+}
+
+.dash nav ul li a {
+    margin-left: 1em;
+}
+
+.dash .mode {
+    margin-bottom: 4em;
+    display: flex;
+    align-items: center;
+}
+
+.dash .mode strong {
+    color: var(--text-color);
+}
+
+.dash .mode div {
+    margin-left: 1em;
+    position: relative;
+    padding: 3px;    
+    width: 2em;
+    height: 17px;
+    background: var(--btn-color);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.dash .mode div span {
+    position: absolute;
+    width: 5px;
+    height: 70%;
+    background: var(--dash-color);
+    border-radius: 3px;
+}
+
+.dashboard {
+    position: relative;
+    right: -15em;
+    width: calc(100% - 15em);
+    background: var(--dashboard-color);
+    padding: 3em 5em;
+}
+
+.dashboard .head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard .head .logo h1 {
+    color: var(--primary-color);
+}
+
+.dashboard .head form input {
+    background: var(--dash-color);
+}
