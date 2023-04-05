@@ -247,7 +247,18 @@ body , .container {
 }
 
 .dashboard header ul li {
+    position: relative;
     margin-right: 8em;
+}
+
+.dashboard header ul li:nth-of-type(1)::before {
+    content: '';
+    position: absolute;
+    right: -5px;
+    left: -5px;
+    top: 2em;
+    height: 4px;
+    background: var(--primary-color);
 }
 
 .dashboard header .update {
