@@ -177,7 +177,7 @@ body , .container {
     color: var(--text-color);
 }
 
-.dash .mode div {
+.dash .mode .theme {
     margin-left: 1em;
     position: relative;
     padding: 3px;    
@@ -189,7 +189,12 @@ body , .container {
     align-items: center;
 }
 
-.dash .mode div span {
+.dash .mode .theme.clicked span {
+    transform: translateX(20px);
+    transition: transform 0.5s;
+}
+
+.dash .mode .theme span {
     position: absolute;
     width: 5px;
     height: 70%;
