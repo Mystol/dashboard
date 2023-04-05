@@ -224,5 +224,12 @@ body , .container {
     border-radius: 100%;
     background: var(--primary-color);
     color: var(--dash-color);
+    opacity: 0.6;
 }
 
+.dashboard .head .profils {
+    width: 15vw;
+    height: 2.5em;
+    background: var(--dash-color);
+    border-radius: 2em;
+}
