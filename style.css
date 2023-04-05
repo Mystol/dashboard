@@ -199,13 +199,30 @@ body , .container {
     color: var(--primary-color);
 }
 
+.dashboard .head form {
+    position: relative;
+}
+
 .dashboard .head form input {
     background: var(--dash-color);
     outline: none;
     border: none;
-    width: 25vw;
+    width: 30vw;
     border-radius: 1.5em;
     padding: 1em 1em 1em 2em;
 }
-/* 
-.dashboard .head form  */
+
+.dashboard .head form i {
+    position: absolute;
+    top: 12%;
+    right: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: var(--primary-color);
+    color: var(--dash-color);
+}
+
