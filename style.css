@@ -201,4 +201,11 @@ body , .container {
 
 .dashboard .head form input {
     background: var(--dash-color);
+    outline: none;
+    border: none;
+    width: 25vw;
+    border-radius: 1.5em;
+    padding: 1em 1em 1em 2em;
 }
+/* 
+.dashboard .head form  */
