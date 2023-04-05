@@ -11,15 +11,17 @@
 :root {
     --primary-color: #E85817;
     --dash-color: #fff;
-    --dashboard-color: #FAF9FA;
+    --dashboard-color: #f5f5f5;
     --text-color: #C6C4C6;
     --color-text: #383738;
     --btn-color: #1CB497;
+}
 
-    /* --primary-color: #E85817;
+.dark-theme {
+    --primary-color: #E85817;
     --dash-color: #20252B;
     --dashboard-color: #282C38;
-    --text-color: #C3C1C2; */
+    --text-color: #C3C1C2;
 }
 
 body , .container {
@@ -120,6 +122,7 @@ body , .container {
     border-radius: 100%;
     box-shadow: 21px 35px 0 10px var(--dashboard-color);
 }
+
 .dash nav ul li:hover::after {
     content: '';
     position: absolute;
