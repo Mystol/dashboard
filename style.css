@@ -44,6 +44,7 @@ body , .container {
     align-items: center;
     flex-direction: column;
     background: var(--dash-color);
+    transition: background 0.2s;
 }
 
 .dash .profil {
@@ -109,6 +110,11 @@ body , .container {
     align-items: center;
     border-bottom-left-radius: 2em;
     border-top-left-radius: 2em;
+    cursor: pointer;
+}
+
+.dash nav ul li.clicked a {
+    color: var(--primary-color);
 }
 
 .dash nav ul li:hover::before {
@@ -194,12 +200,17 @@ body , .container {
     transition: transform 0.5s;
 }
 
+/* .dash .mode .theme.clicked body {
+    transition: transform 0.5s;
+} */
+
 .dash .mode .theme span {
     position: absolute;
     width: 5px;
     height: 70%;
     background: var(--dash-color);
     border-radius: 3px;
+    transition: transform 0.5s;
 }
 
 .dashboard {
@@ -208,6 +219,7 @@ body , .container {
     width: calc(100% - 15em);
     background: var(--dashboard-color);
     padding: 3em 5em;
+    transition: background 0.2s;
 }
 
 .dashboard .head {
@@ -250,10 +262,59 @@ body , .container {
 }
 
 .dashboard .head .profils {
-    width: 15vw;
+    position: relative;
+    width: 13vw;
     height: 2.5em;
     background: var(--dash-color);
     border-radius: 2em;
+    display: flex;
+}
+
+.dashboard .head .profils div {
+    position: absolute;
+    /* margin-right: 1em; */
+    transform: translateX();
+    width: 2.5em;
+    height: 100%;
+    border-radius: 100%;
+    background: var(--primary-color);
+}
+
+.dashboard .head .profils div:nth-child(1) {
+    background: url('imgs/pexels-pixabay-415829.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* transform: translateX(); */
+}
+
+.dashboard .head .profils div:nth-child(2) {
+    background: url('imgs/pexels-pixabay-415829.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateX(2em);
+}
+
+.dashboard .head .profils div:nth-child(3) {
+    background: url('imgs/pexels-pixabay-415829.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateX(4em);
+}
+
+.dashboard .head .profils div:nth-child(4) {
+    background: url('imgs/pexels-pixabay-415829.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateX(6em);
+}
+
+.dashboard .head .profils div:nth-child(5) {
+    background: var(--color-text);
+    transform: translateX(8em);
 }
 
 .dashboard header {
