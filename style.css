@@ -238,7 +238,7 @@ body , .container {
     right: -15em;
     width: calc(100% - 15em);
     background: var(--dashboard-color);
-    padding: 0 5em 3em 5em;
+    padding: 0 0 3em 0;
     transition: background 0.2s;
     height: 100vh;
     overflow-y: scroll;
@@ -246,10 +246,10 @@ body , .container {
 
 .dashboard article {
     position: fixed;
-    padding-top: 5%;
+    padding: 5% 5em 0;
     z-index: 10;
     background: var(--dashboard-color);
-    width: 72.4%;
+    width: calc(100% - 15em);
 }
 
 .dashboard .head {
@@ -410,7 +410,7 @@ body , .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1.7em;
-    padding-bottom: 2em;
+    padding: 0 3em 2em 3em;
 }
 
 .dashboard section div {
@@ -424,6 +424,13 @@ body , .container {
     color: var(--dash-color);
     grid-column: 1 / span 2;
     height: 23em;
+}
+
+.dashboard section div {
+    transform-style: preserve-3d;
+    transform-origin: left;
+    /* transform: rotate(20deg); */
+    background: red;
 }
 
 .dashboard section .design aside strong {
