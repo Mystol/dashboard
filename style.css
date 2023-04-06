@@ -367,9 +367,9 @@ body , .container {
 }
 
 .dashboard section {
-    /* display: grid; */
-    /* grid-template-columns: repeat(3, 1fr); */
-    /* grid-gap: 1em; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
 }
 
 .dashboard section div {
@@ -380,6 +380,7 @@ body , .container {
 .dashboard section .design {
     background: var(--primary-color);
     color: var(--dash-color);
+    grid-column: 1 / span 2;
 }
 
 .dashboard section .design aside strong {
@@ -388,6 +389,7 @@ body , .container {
 }
 
 .dashboard section .design aside h4 {
+    justify-content: s;
     letter-spacing: 0.2em;
     font-weight: 300;
     margin: 0.3em 0;
@@ -417,6 +419,8 @@ body , .container {
 
 .dashboard section .learn {
     background: #212429;
+    grid-row: 2 ;
+    /* height: 20em; */
 }
 
 .dashboard section .morning {
