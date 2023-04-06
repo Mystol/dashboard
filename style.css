@@ -113,11 +113,16 @@ body , .container {
     cursor: pointer;
 }
 
-.dash nav ul li.clicked a {
+.dash nav ul li.active i,
+.dash nav ul li.active a
+{
     color: var(--primary-color);
+    transition: color 0.5s;
 }
 
-.dash nav ul li:hover::before {
+
+
+.dash nav ul li.active::before {
     content: '';
     position: absolute;
     top: -63%;
@@ -129,7 +134,7 @@ body , .container {
     box-shadow: 21px 35px 0 10px var(--dashboard-color);
 }
 
-.dash nav ul li:hover::after {
+.dash nav ul li.active::after {
     content: '';
     position: absolute;
     bottom: -63%;
@@ -141,7 +146,7 @@ body , .container {
     box-shadow: 21px -35px 0 10px var(--dashboard-color);
 }
 
-.dash nav ul li:hover {
+.dash nav ul li.active {
     background: var(--dashboard-color);
     border-radius: 5em;
 }
@@ -171,6 +176,7 @@ body , .container {
 
 .dash nav ul li a {
     margin-left: 1em;
+    font-weight: bold;
 }
 
 .dash .mode {
@@ -199,10 +205,6 @@ body , .container {
     transform: translateX(20px);
     transition: transform 0.5s;
 }
-
-/* .dash .mode .theme.clicked body {
-    transition: transform 0.5s;
-} */
 
 .dash .mode .theme span {
     position: absolute;
@@ -265,14 +267,12 @@ body , .container {
     position: relative;
     width: 13vw;
     height: 2.5em;
-    /* background: var(--dash-color); */
     border-radius: 2em;
     display: flex;
 }
 
 .dashboard .head .profils div {
     position: absolute;
-    /* margin-right: 1em; */
     transform: translateX();
     width: 2.5em;
     height: 100%;
@@ -285,7 +285,6 @@ body , .container {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* transform: translateX(); */
 }
 
 .dashboard .head .profils div:nth-child(2) {
@@ -365,4 +364,69 @@ body , .container {
 
 .dashboard header .update a:last-child {
     margin: 0 1em 0 2em;
+}
+
+.dashboard section {
+    /* display: grid; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-gap: 1em; */
+}
+
+.dashboard section div {
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.dashboard section .design {
+    background: var(--primary-color);
+    color: var(--dash-color);
+}
+
+.dashboard section .design aside strong {
+    letter-spacing: 0.1em;
+    font-size: 1.5em;
+}
+
+.dashboard section .design aside h4 {
+    letter-spacing: 0.2em;
+    font-weight: 300;
+    margin: 0.3em 0;
+}
+
+.dashboard section .design aside p {
+    line-height: 2em;
+    font-weight: lighter;
+    width: 25em;
+    font-size: 0.8em;
+    margin: 2em 0 0;
+}
+
+.dashboard section .design aside button {
+    display: flex;
+    align-items: center;
+    margin-top: 4em;
+    background: var(--dash-color);
+    padding: 0.8em 0.5em;
+    border: none;
+    border-radius: 1em;
+}
+
+.dashboard section .design aside button i {
+    font-size: 1.5em;
+}
+
+.dashboard section .learn {
+    background: #212429;
+}
+
+.dashboard section .morning {
+    background: #FFD715;
+}
+
+.dashboard section .user {
+    background: #4593E4;
+}
+
+.dashboard section .web {
+    background: #01AB8A;
 }
