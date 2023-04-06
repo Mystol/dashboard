@@ -419,6 +419,7 @@ body , .container {
 }
 
 .dashboard section .design {
+    position: relative;
     background: var(--primary-color);
     color: var(--dash-color);
     grid-column: 1 / span 2;
@@ -459,9 +460,24 @@ body , .container {
     font-size: 1.5em;
 }
 
+.dashboard section .design .img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 350px;
+    height: 100%;
+    background: url('imgs/cube.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .dashboard section .learn {
     position: relative;
-    background: #212429;
+    background: url('imgs/pexels-moisés-fonseca-16136091.jpg');
+    background-size: cover;
+    background-repeat: none;
+    background-position: -20px -90px;
     height: 27em;
 }
 
@@ -480,7 +496,7 @@ body , .container {
     position: absolute;
     top: 60%;
     color: var(--dash-color);
-    opacity: 0.5;
+    opacity: 0.8;
     font-size: 0.7em;
     line-height: 1.5em;
 }
@@ -519,6 +535,20 @@ body , .container {
     background: #4593E4;
 }
 
+.dashboard section .user strong {
+    color: var(--dash-color);
+    letter-spacing: 0.1em;
+    font-size: 1.5em;
+}
+
+.dashboard section .user aside p {
+    margin-top: 1.5em;
+    line-height: 1.5em;
+    width: 15em;
+    font-size: 0.7em;
+    color: var(--dash-color);
+}
+
 .dashboard section .user aside i {
     margin-top: 1em;
     padding: 0.3em;
@@ -530,4 +560,9 @@ body , .container {
 
 .dashboard section .web {
     background: #01AB8A;
+}
+
+.dashboard section .web strong {
+    letter-spacing: 0.1em;
+    font-size: 1.5em;
 }
