@@ -265,7 +265,7 @@ body , .container {
     position: relative;
     width: 13vw;
     height: 2.5em;
-    background: var(--dash-color);
+    /* background: var(--dash-color); */
     border-radius: 2em;
     display: flex;
 }
