@@ -92,13 +92,19 @@ body , .container {
 
 .dash nav,
 .dash nav ul,
-.dash nav ul li {
+.dash nav ul li,
+.dash nav ul span {
     width: 100%;
 }
+
 .dash nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.dash nav ul {
+    position: relative;
 }
 
 .dash nav ul li {
@@ -108,9 +114,20 @@ body , .container {
     padding-left: 2em;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.dash nav ul span {
+    position: absolute;
+    margin-left: 2em;
+    left: 0;
+    height: 3.8em;
+    background: var(--text-color);
+    color: var(--primary-color);
     border-bottom-left-radius: 2em;
     border-top-left-radius: 2em;
-    cursor: pointer;
+    z-index: 1;
 }
 
 .dash nav ul li.active i,
@@ -120,9 +137,15 @@ body , .container {
     transition: color 0.5s;
 }
 
+.dash nav ul span {
+    display: block;
+    background: var(--dashboard-color);
+    border-radius: 5em;
+    z-index: -1;
+    transition: transform 0.3s;
+}
 
-
-.dash nav ul li.active::before {
+.dash nav ul span::before {
     content: '';
     position: absolute;
     top: -63%;
@@ -134,7 +157,7 @@ body , .container {
     box-shadow: 21px 35px 0 10px var(--dashboard-color);
 }
 
-.dash nav ul li.active::after {
+.dash nav ul span::after {
     content: '';
     position: absolute;
     bottom: -63%;
@@ -146,20 +169,15 @@ body , .container {
     box-shadow: 21px -35px 0 10px var(--dashboard-color);
 }
 
-.dash nav ul li.active {
-    background: var(--dashboard-color);
-    border-radius: 5em;
-}
-
 .dash nav ul li a,
 .dash nav ul li i {
     color: var(--text-color);
 }
 
-.dash nav ul li:nth-child(3) a {
+.dash nav ul li:nth-child(4) a {
     position: relative;
 }
-.dash nav ul li:nth-child(3) a::after {
+.dash nav ul li:nth-child(4) a::after {
     content: '';
     position: absolute;
     top: 25%;
@@ -220,8 +238,18 @@ body , .container {
     right: -15em;
     width: calc(100% - 15em);
     background: var(--dashboard-color);
-    padding: 3em 5em;
+    padding: 0 5em 3em 5em;
     transition: background 0.2s;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.dashboard article {
+    position: fixed;
+    padding-top: 5%;
+    z-index: 10;
+    background: var(--dashboard-color);
+    width: 72.4%;
 }
 
 .dashboard .head {
@@ -314,9 +342,19 @@ body , .container {
 .dashboard .head .profils div:nth-child(5) {
     background: var(--color-text);
     transform: translateX(8em);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dash-color);
+}
+
+.dashboard .head .profils div:nth-child(5) i {
+    font-size: 1.3em;
+    font-weight: 900;
 }
 
 .dashboard header {
+    /* position: fixed; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -367,9 +405,12 @@ body , .container {
 }
 
 .dashboard section {
+    position: relative;
+    top: 38%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1em;
+    grid-gap: 1.7em;
+    padding-bottom: 2em;
 }
 
 .dashboard section div {
@@ -381,6 +422,7 @@ body , .container {
     background: var(--primary-color);
     color: var(--dash-color);
     grid-column: 1 / span 2;
+    height: 23em;
 }
 
 .dashboard section .design aside strong {
@@ -408,9 +450,9 @@ body , .container {
     align-items: center;
     margin-top: 4em;
     background: var(--dash-color);
-    padding: 0.8em 0.5em;
+    padding: 0.8em 1em;
     border: none;
-    border-radius: 1em;
+    border-radius: 1.5em;
 }
 
 .dashboard section .design aside button i {
@@ -418,17 +460,72 @@ body , .container {
 }
 
 .dashboard section .learn {
+    position: relative;
     background: #212429;
-    grid-row: 2 ;
-    /* height: 20em; */
+    height: 27em;
+}
+
+.dashboard section .learn strong {
+    position: absolute;
+    top: 30%;
+    right: 13%;
+    letter-spacing: 0.1em;
+    font-size: 1.5em;
+    color: var(--dash-color);
+    line-height: 1.5em;
+}
+
+.dashboard section .learn p {
+    width: 25em;
+    position: absolute;
+    top: 60%;
+    color: var(--dash-color);
+    opacity: 0.5;
+    font-size: 0.7em;
+    line-height: 1.5em;
 }
 
 .dashboard section .morning {
+    position: relative;
+    top: -28%;
     background: #FFD715;
+    display: flex;
+}
+
+.dashboard section .morning aside strong {
+    letter-spacing: 0.1em;
+    font-size: 1.5em;
+}
+
+.dashboard section .morning aside p {
+    margin-top: 1.5em;
+    line-height: 1.5em;
+    width: 10em;
+    font-size: 0.7em;
+}
+
+.dashboard section .morning aside i {
+    margin-top: 1em;
+    padding: 0.3em;
+    color: #4593E4;
+    border-radius: 100%;
+    font-size: 1.3em;
+    background: var(--dash-color);
 }
 
 .dashboard section .user {
+    position: relative;
+    top: -28%;
     background: #4593E4;
+}
+
+.dashboard section .user aside i {
+    margin-top: 1em;
+    padding: 0.3em;
+    color: #4593E4;
+    border-radius: 100%;
+    font-size: 1.3em;
+    background: var(--dash-color);
 }
 
 .dashboard section .web {
