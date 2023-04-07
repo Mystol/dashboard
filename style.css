@@ -426,13 +426,6 @@ body , .container {
     height: 23em;
 }
 
-.dashboard section div {
-    transform-style: preserve-3d;
-    transform-origin: left;
-    /* transform: rotate(20deg); */
-    background: red;
-}
-
 .dashboard section .design aside strong {
     letter-spacing: 0.1em;
     font-size: 1.5em;
